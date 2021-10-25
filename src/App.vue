@@ -9,7 +9,7 @@
 
 <script>
 import Homepage from './components/Homepage.vue';
-import About from './components/about.vue';
+import About from './components/About.vue';
 import Portfolio from './components/Portfolio.vue';
 import Navigation from './components/Navigation.vue';
 
@@ -36,7 +36,7 @@ export default {
   },
   watch: {
     currentpage: function(){
-      console.log("test "+this.$store.getters.currentpage);
+      //console.log("test "+this.$store.getters.currentpage);
     }
   },
    methods: {
