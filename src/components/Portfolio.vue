@@ -73,10 +73,6 @@ export default {
 /* HOME */
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #F3EDE2; 
   }
 
   .navi {

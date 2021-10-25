@@ -11,16 +11,9 @@
   "dependencies": {
     "axios": "^0.23.0",
     "core-js": "^3.6.5",
-    "vue": "^2.5.21"
-    new "vuex": "^3.0.1"
-    "vue-router":"^3.0.1"
-    "jquery":"^3.3.1"
-    "node-sass":"^7.1.0"
-    "@fontawesome/fontawesome-svg-core":"^1.2.13"
-    "@fontawesome/free-solid-svg-icons":"^5.7.0"
-    "@fontawesome/vue-fontawesome":"^0.1.5"
-    "@fontawesome/fontawesome-free-solid":"^5.0.13"
-    "@vue/babel-helper-vue-jsx-merge-props":"^0.10"
+    "es6-promise": "^4.2.8",
+    "vue": "^2.5.21",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
