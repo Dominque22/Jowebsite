@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navigation class="homeButton" v-if="currentpage != 'Home'"/>
+    <Navigation class="homeButton" />
     <Homepage v-if="currentpage == 'Home'" msg="Joanna Matanga"/>
     <Portfolio v-if="currentpage == 'Portfolio'" />
     <About v-if="currentpage == 'About'" />
