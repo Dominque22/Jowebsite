@@ -1,13 +1,20 @@
 <template>
 	<div>
-	<div @click="changepage('Home')" class="display" >
+	<div @click="changepage(currentpage)" class="display" >
 		<div class="hamburger">
 			<div class="menu-btn1"></div>
 			<div class="menu-btn2"></div>
 			<div class="menu-btn3"></div>
+			{{overlay + currentpage}}
 		</div>
 	</div>
-	</div>
+		<ul class="menu"  v-if="overlay == true">
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">365</a></li>
+			<li><a href="#">Hey!</a></li>
+		</ul>
+  </div>
 </template>
 
 <script>
@@ -15,9 +22,29 @@
 export default {
   name: 'Navigation',
   methods: {
-    changepage: function(page){
-      this.$store.commit('currentpage', page);
+    changepage: function(){
+      this.$store.commit('overlay');
    },
+  },
+  computed: {
+    currentpage: {
+      get: function() {
+        return this.$store.getters.currentpage;
+      }
+    },
+    overlay: {
+      get: function() {
+        return this.$store.getters.overlay;
+      },
+    }
+  },
+  watch: {
+    currentpage: function(){
+      //console.log("test "+this.$store.getters.currentpage);
+    },
+    overlay:  function(){
+      //console.log("test "+this.$store.getters.overlay);
+    },
   }
 }
 </script>
@@ -76,7 +103,7 @@ position: absolute;
 
 
 .menu {
-	display: none;
+	
 	margin: 50px 0; 
 }
 

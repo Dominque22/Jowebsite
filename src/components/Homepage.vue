@@ -1,13 +1,12 @@
 <template>
 	<div>
 		<section>
-			<h1>{{ msg }}</h1>
 			<div class="navi">
 				<ul>
-				<li><button @click="changepage('About')">About</button></li>
-				<li><button @click="changepage('Portfolio')">Portfolio</button></li>
-				<li><button @click="changepage('Portfolio')">365</button></li>
-				<li><button @click="changepage('Portfolio')">Hi</button></li>
+          <li><button @click="changepage('About')">About</button></li>
+          <li><button @click="changepage('Portfolio')">Portfolio</button></li>
+          <li><button @click="changepage('Portfolio')">365</button></li>
+          <li><button @click="changepage('Portfolio')">Hi</button></li>
 				</ul>
 			</div>
 		</section>

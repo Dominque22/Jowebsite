@@ -1,3 +1,7 @@
 module.exports = {
-	publicPath: '/Jowebsite/'
+    publicPath: '/Jowebsite/',
+
+    transpileDependencies: [
+      'vuetify'
+    ]
 }
