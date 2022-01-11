@@ -1,15 +1,28 @@
 <template>
 	<div class=emenu>
     <ul class="menu">
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">365</a></li>
-          <li><a href="#">Hey!</a></li>
+          <li><button @click="changepage('About')">About</button></li>
+          <li><button @click="changepage('Portfolio')">Portfolio</button></li>
+          <li><button @click="changepage('Portfolio')">365</button></li>
+          <li><button @click="changepage('Portfolio')">Hi</button></li>
     </ul>
   </div>
 </template>
-
-
+<script>
+export default {
+  name: 'Homepage',
+  props: {
+    msg: String
+  },
+  components: {
+  },
+  methods: {
+    changepage: function(page){
+      this.$store.commit('currentpage', page);
+   },
+  }
+}
+</script>
 <style scoped>
 
    /* E TO M MENU */

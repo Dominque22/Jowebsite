@@ -1,9 +1,10 @@
 <template>   
   <div id="app">
     <Navigation class="homeButton" />
-    <Homepage v-if="checkpage() == true" msg="Joanna Matanga"/>
-    <Portfolio v-if="currentpage == 'Portfolio' && overlay == false" />
-    <About v-if="currentpage == 'About' && overlay == false" />
+    <Homepage v-if="currentpage == 'Home'" msg="Joanna Matanga"/>
+    <Portfolio v-if="currentpage == 'Portfolio'" />
+    <About v-if="currentpage == 'About'" />
+    <Popup v-if="currentpage == 'Overlay'" />
 	</div>
 </template>
 
@@ -12,6 +13,7 @@ import Homepage from './components/Homepage.vue';
 import About from './components/About.vue';
 import Portfolio from './components/Portfolio.vue';
 import Navigation from './components/Navigation.vue';
+import Popup from './components/Popup.vue';
 
 export default {
   name: 'App',
@@ -20,9 +22,11 @@ export default {
     Portfolio,
     About,
     Navigation,
+    Popup,
   },
   data: function() {
     return{
+     
     }
   },
   computed: {
@@ -33,31 +37,17 @@ export default {
       set:  function() {
       }
     },
-    overlay:  function() {
-        return this.$store.getters.overlay;
-      },
   },
   watch: {
     currentpage: function(){
       //console.log("test "+this.$store.getters.currentpage);
-    },
-    overlay:  function(){
-      //console.log("test "+this.$store.getters.currentpage);
-    },
+    }
   },
    methods: {
     changepage: function(page){
       this.$store.commit('currentpage', page);
     },
-    checkpage: function(){
-      console.log(this.currentpage +" "+ this.overlay);
-      if(this.currentpage == 'Home' && this.overlay == false){
-        console.log(this.currentpage +" 2 "+ this.overlay);
-        return true;
-      }
-      return false;
-    }
-   }
+  }
     
 }
 </script>

@@ -1,19 +1,12 @@
 <template>
-	<div>
-	<div @click="changepage(currentpage)" class="display" >
-		<div class="hamburger">
-			<div class="menu-btn1"></div>
-			<div class="menu-btn2"></div>
-			<div class="menu-btn3"></div>
-			{{overlay + currentpage}}
+	<div  @click="changepage('Overlay')">
+		<div class="display" >
+			<div class="hamburger">
+				<div class="menu-btn1"></div>
+				<div class="menu-btn2"></div>
+				<div class="menu-btn3"></div>
+			</div>
 		</div>
-	</div>
-		<ul class="menu"  v-if="overlay == true">
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">365</a></li>
-			<li><a href="#">Hey!</a></li>
-		</ul>
   </div>
 </template>
 
@@ -21,30 +14,44 @@
 
 export default {
   name: 'Navigation',
-  methods: {
-    changepage: function(){
-      this.$store.commit('overlay');
-   },
-  },
-  computed: {
-    currentpage: {
-      get: function() {
-        return this.$store.getters.currentpage;
-      }
-    },
-    overlay: {
-      get: function() {
-        return this.$store.getters.overlay;
-      },
+   data: function() {
+    return{
+		backgroundPage: ''
     }
   },
+  methods: {
+    changepage: function(page){
+		if(this.currentpage != 'Overlay'){
+			this.backgroundPage =this.currentpage;
+			this.$store.commit('currentpage', page);
+		}
+		else{
+			this.$store.commit('currentpage', this.backgroundPage);
+		}
+   },
+   updateToggle: function(){
+		console.log("toggle");
+		const hamburger = document.querySelector(".hamburger");
+		if(this.currentpage == "Overlay"){
+			hamburger.classList.add("active");
+		}else{
+			hamburger.classList.remove("active");
+		}
+   }
+  },
+  computed: {
+	currentpage: {
+      get: function() {
+        return this.$store.getters.currentpage;
+      },
+      set:  function() {
+      }
+    },
+  },
   watch: {
-    currentpage: function(){
-      //console.log("test "+this.$store.getters.currentpage);
-    },
-    overlay:  function(){
-      //console.log("test "+this.$store.getters.overlay);
-    },
+	currentpage: function(){
+		this.updateToggle();
+    }
   }
 }
 </script>
@@ -100,10 +107,7 @@ position: absolute;
 }
 
 /* INSIDE MENU BELOW */
-
-
 .menu {
-	
 	margin: 50px 0; 
 }
 
@@ -111,15 +115,6 @@ ul, li {
 	margin: 50px 0;
 	text-align: center;
 	text-decoration: none;
-
-}
-
-ul {
-
-}
-
-li{
-
 }
 .menu.active {
 	display: block;
@@ -139,11 +134,7 @@ li{
 }
 
 .menu a:hover {
-color: black;
-text-decoration: none;
-
+	color: black;
+	text-decoration: none;
 }
-
-  
- 
 </style>
