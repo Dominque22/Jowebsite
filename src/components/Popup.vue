@@ -109,7 +109,7 @@ export default {
         align-items: center;
         justify-content: center; 
         vertical-align: middle;
-          text-decoration: none;
+        text-decoration: none;
       }
       
       .menu a:hover {
