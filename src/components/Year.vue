@@ -1,16 +1,12 @@
 <template>
-	<div class=emenu>
-    <ul class="menu">
-          <li><button @click="changepage('About')">About</button></li>
-          <li><button @click="changepage('Portfolio')">Portfolio</button></li>
-          <li><button @click="changepage('Portfolio')">365</button></li>
-          <li><button @click="changepage('Portfolio')">Hi</button></li>
-    </ul>
+	<div>
+    <h1>365</h1>
+    <h3>today feels like a good day to try again.</h3>
   </div>
 </template>
 <script>
 export default {
-  name: 'Homepage',
+  name: 'Year',
   props: {
     msg: String
   },
@@ -87,13 +83,8 @@ export default {
           text-decoration: none;
        
       }
-      
-      ul {
-        
-      }
-      
-      li{
-        
+      ul#menu li {
+        display:inline;
       }
       .menu.active {
         display: block;

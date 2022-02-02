@@ -1,10 +1,10 @@
 <template>   
   <div id="app">
     <Navigation class="homeButton" />
-    <Homepage v-if="currentpage == 'Home'" msg="Joanna Matanga"/>
+    <Homepage v-if="currentpage == 'Home' || currentpage == 'Overlay'" msg="Joanna Matanga"/>
     <Portfolio v-if="currentpage == 'Portfolio'" />
     <About v-if="currentpage == 'About'" />
-    <Popup v-if="currentpage == 'Overlay'" />
+    <Year v-if="currentpage == '365'" />
 	</div>
 </template>
 
@@ -13,7 +13,7 @@ import Homepage from './components/Homepage.vue';
 import About from './components/About.vue';
 import Portfolio from './components/Portfolio.vue';
 import Navigation from './components/Navigation.vue';
-import Popup from './components/Popup.vue';
+import Year from './components/Year.vue';
 
 export default {
   name: 'App',
@@ -22,7 +22,7 @@ export default {
     Portfolio,
     About,
     Navigation,
-    Popup,
+    Year,
   },
   data: function() {
     return{
@@ -67,7 +67,7 @@ body {
   background: #F3EDE2; 
 }
 .homeButton{
-  padding: 5%;
+  padding: 2%;
 }
 
 #overlay {

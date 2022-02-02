@@ -1,48 +1,30 @@
 <template>
 	<div>
 		<div class="aboutcontainer">
-			<div class="left-image">
-			</div>
+			<div class="left-image"></div>
 			<div class="bout-me">
-			<div class="content">
-				<h1>Joanna</h1>
-				<p>Come with me leave all of your things, yeah. We can stop at Gucci, stop at Louis V, yeah. Come with me. Fly you out to Greece. Full speed, survoler Paris, yeah.
-				
-				<br>Speedboats, baby, in Nikki Beach. Waves in my ears, smokin' weed (Oui, oui). Whippin' through the sand in a Jeep (Oui, oui). All because of what I did on beats, baby. Life's sweet, baby, iced out, baby. You just go get ready, we go out, baby. Long time lookin' for the bounce, yeah. OZ had the bounce, yeah.</p>
-			</div>
+        <div class="content">
+          <p>This will be information about me. Photo will have a certain color background so this layout m. kes sense. Need this paragraph to just move DER my photo when the page is made smaller. 
+            Photo will also flip (like the main portfolio page) and show a different photo when hovered.
+          <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
 			</div>
 		</div>
-		
-		<div class="contact-form">
-		
-		</div>
-		
-			<div class="quote">
-				<p>"We are not crushed"<br>Lori Hetteen</p>
-				<div class="footer">
-					jomatanga11@gmail.com
-				</div> 
-				<!--<p class="copyright">&copy; Copyright 2020 Joanna Matanga</p>-->
-			</div>
-		
-		<!--<div class="contact-form">
-			<form id="form" class="topBefore">
-				
-					<input id="name" type="text" placeholder="NAME">
-					<input id="email" type="text" placeholder="E-MAIL">
-					<textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-			<input id="submit" type="submit" value="send">
-			
-		</div>-->
-		
-			
-		<!--script src="./script.js"></script-->  
+    <div class="powr-form-builder" id="f89da89f_1643839465"></div>
+    
+    <!--div class="powr-form-builder" id="f89da89f_1643839465"></div><script src="https://www.powr.io/powr.js?platform=html"></script-->
 	</div>
 </template>
 
 <script>
+/* eslint-disable no-useless-escape */
+import postscribe from 'postscribe'
 export default {
-  name: 'Homepage',
+  name: 'About',
+  mounted: function () {
+    postscribe('#f89da89f_1643839465', `<script src="https://www.powr.io/powr.js?platform=html"/><\/script>`)
+  },
   props: {
     msg: String
   }
@@ -70,7 +52,13 @@ body {
     padding: 0;
     text-align: center;
   }
+  .content{
+    text-align: left;
+  }
 
+  .greeting{
+    color:red;
+  }
   .navi li {
     display: inline;
     

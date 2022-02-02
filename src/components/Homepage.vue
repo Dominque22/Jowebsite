@@ -5,8 +5,8 @@
 				<ul>
           <li><button @click="changepage('About')">About</button></li>
           <li><button @click="changepage('Portfolio')">Portfolio</button></li>
-          <li><button @click="changepage('Portfolio')">365</button></li>
-          <li><button @click="changepage('Portfolio')">Hi</button></li>
+          <li><button @click="changepage('365')">365</button></li>
+          <li><button @click="changepage('Portfolio')">hello!</button></li>
 				</ul>
 			</div>
 		</section>

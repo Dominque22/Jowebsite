@@ -1,62 +1,74 @@
 <template>
-	<div class="portcontainer">
-  
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-            <div class="front">
-                Unlike Any Other
-            </div>
-            <div class="back">
-                "We want to talk about Easter"
-            </div>
-        </div>
-    </div>
-    
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-            <div class="front">
-                Book of Daniel
-            </div>
-            <div class="back">
-                "We want to talk about the book of Daniel"
+  <div>
+      <div class="portcontainer">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front">
+                    <img alt="img" class="image-fit" src="..\assets\gettingPast.jpeg">
+                </div>
+                <div class="back">
+                    "We want to talk about Easter"
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-            <div class="front">
-                Getting Passed I'm Fine
-            </div>
-            <div class="back">
-                "We want to talk about EHS"
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-            <div class="front">
-                Good News
-            </div>
-            <div class="back">
-                "We want to talk about Easter"
-            </div>
-        </div>
-    </div>
-    
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-            <div class="front">
-                Values
-            </div>
-            <div class="back">
-                "We want to talk about Us"
+      </div>
+      <div class="row proText">
+          <div class="col1">
+            <h2>Problem</h2>
+            <p>Here would be a summary of the project telling about the goal, my role and contributions, the problem, thinking through the context, and accomplishements/reflections.</p>
+          </div>
+          <div class="col1">
+            <h2>Goal</h2>
+            <p>Here would be a summary of the project telling about the goal, my role and contributions, the problem, thinking through the context, and accomplishements/reflections</p>
+          </div>
+      </div>
+      <div class="row ConText">
+          <h2>Contributions</h2>
+          <p>What did I do to make this happen..</p>
+      </div>
+      <div class="portcontainer conImage1">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front">
+                    <img alt="img" class="image-fit" src="..\assets\how.jpg">
+                </div>
+                <div class="back">
+                    "We want to talk about Easter"
+                </div>
             </div>
         </div>
+      </div>
+       <div class="row conImage2">
+          <div class="col1">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <img alt="img" class="image-fit" src="..\assets\chain.jpg">
+                </div>
+                <div class="back">
+                  "We want to talk about Easter"
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="col1">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <img alt="img" class="image-fit" src="..\assets\we.jpg">
+                </div>
+                <div class="back">
+                  "We want to talk about Easter"
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row ContributText">
+          <h2>Contributions</h2>
+          <p>What did I do to make this happen..</p>
+      </div>
     </div>
-	</div>
 </template>
 
 <script>
@@ -74,6 +86,40 @@ export default {
 
 body {
   }
+  .projectText{
+      min-height:  15rem;
+  }
+  .ContributText{
+
+  }
+  .proText{
+    margin: 1rem;
+    min-height:  4rem;
+  }
+  .conImage1{
+    margin: 1rem;
+    min-height:  20rem;
+  }
+   .conImage2{
+    margin: 1rem;
+    min-height:  20rem;
+    padding-left: 20rem;
+  }
+  .ConText{
+    border-top: black;
+    border-top-style: groove;
+    margin: 1rem 10rem;
+    min-height:  3rem;
+  }
+  .image-fit{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+  .col1 {
+  float: left;
+  width: 50%;
+}
 
   .navi {
     background: #F3EDE2; 
