@@ -1,5 +1,5 @@
 <template>
-	<div  @click="changepage('Overlay')">
+	<div  class="background"  @click="changepage('Overlay')">
 		<div class="display" >
 			<div class="hamburger">
 				<div class="menu-btn1"></div>
@@ -65,6 +65,9 @@ position: absolute;
 	top: 1%;
 	cursor: pointer
 }
+.background {
+       background: #F3EDE2;; 
+  }
 .display:hover {
   color: #9FA694;
   text-decoration: underline;

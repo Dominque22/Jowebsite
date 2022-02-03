@@ -1,6 +1,6 @@
-<template>
-  <div>
-      <div class="portcontainer">
+<template >
+  <div class="background">
+      <div class="portcontainer w-100">
         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
                 <div class="front">
@@ -12,21 +12,21 @@
             </div>
         </div>
       </div>
-      <div class="row proText">
-          <div class="col1">
+      <div class="w-100 row">
+          <div class="w-50 textCol">
             <h2>Problem</h2>
             <p>Here would be a summary of the project telling about the goal, my role and contributions, the problem, thinking through the context, and accomplishements/reflections.</p>
           </div>
-          <div class="col1">
+          <div class="w-50 textCol">
             <h2>Goal</h2>
             <p>Here would be a summary of the project telling about the goal, my role and contributions, the problem, thinking through the context, and accomplishements/reflections</p>
           </div>
       </div>
-      <div class="row ConText">
+      <div class="row w-100">
           <h2>Contributions</h2>
           <p>What did I do to make this happen..</p>
       </div>
-      <div class="portcontainer conImage1">
+      <div class="portcontainer w-100">
         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
                 <div class="front">
@@ -38,8 +38,8 @@
             </div>
         </div>
       </div>
-       <div class="row conImage2">
-          <div class="col1">
+       <div class="row w-100">
+          <div class="w-50">
             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
               <div class="flipper">
                 <div class="front">
@@ -51,7 +51,7 @@
               </div>
             </div>
         </div>
-          <div class="col1">
+          <div class="w-50">
             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
               <div class="flipper">
                 <div class="front">
@@ -64,7 +64,7 @@
             </div>
           </div>
       </div>
-      <div class="row ContributText">
+      <div class="row w-100">
           <h2>accomplishements/Reflections</h2>
           <p>What did I learn from doing all of this</p>
       </div>
@@ -84,41 +84,19 @@ export default {
 <style scoped>
 /* HOME */
 
-body {
-  }
-  .projectText{
-      min-height:  15rem;
-  }
-  .ContributText{
-
-  }
-  .proText{
-    margin: 1rem;
-    min-height:  4rem;
-  }
-  .conImage1{
-    margin: 1rem;
-    min-height:  20rem;
-  }
-   .conImage2{
-    margin: 1rem;
-    min-height:  20rem;
-    padding-left: 20rem;
-  }
-  .ConText{
-    border-top: black;
-    border-top-style: groove;
-    margin: 1rem 10rem;
-    min-height:  3rem;
+.background {
+       background: #F3EDE2;; 
   }
   .image-fit{
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-  .col1 {
-  float: left;
-  width: 50%;
+.row{
+  min-width: 40rem;
+}
+.w-50{
+    min-width: 25rem;
 }
 
   .navi {
