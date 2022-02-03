@@ -65,8 +65,8 @@
           </div>
       </div>
       <div class="row ContributText">
-          <h2>Contributions</h2>
-          <p>What did I do to make this happen..</p>
+          <h2>accomplishements/Reflections</h2>
+          <p>What did I learn from doing all of this</p>
       </div>
     </div>
 </template>
